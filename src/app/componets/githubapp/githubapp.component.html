@@ -1,0 +1,45 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <p class="h3 text-secondary">Github Profile Serach</p>
+      <p class="lead">  Hi This Used for Search GitHub Profile and Repos Enter Your GitHub Profile Name and Search It.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore dolorem ea, eaque excepturi nemo possimus qui quia quibusdam quidem. Ad aliquam, corporis deserunt dolor nobis obcaecati reiciendis! Perferendis tempore, voluptatem.</p>
+    </div>
+  </div>
+
+<div class="row">
+  <div class="col">
+    <form action="" class="form-inline">
+      <div class="form-group">
+
+      <input
+        name="githubuser"
+        [(ngModel)]="githubuser"
+        value="" size="40" type="search" class="form-control" placeholder="User Name">
+      </div>
+      <div>
+
+        <input type="submit"   (click)="submitform()" value="search" class="btn btn-success btn-sm" >
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+</div>
+<div class="container" *ngIf="githubProfile">
+  <div class="row">
+    <div class="col">
+      <app-github-profile [githubProfile]="githubProfile"></app-github-profile>
+    </div>
+  </div>
+</div>
+<div class="container mt-3" >
+  <div class="row">
+    <div class="col">
+      <app-github-profile-repos [githubRepos]="githubRepo" [githubPrfile]="githubProfile" ></app-github-profile-repos>
+    </div>
+  </div>
+</div>
+
+
